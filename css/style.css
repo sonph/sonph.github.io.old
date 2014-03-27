@@ -90,6 +90,7 @@
 	a
 	{
 		text-decoration: none;
+/*      default: inherited color & dotted bottom
 		color: inherit;
 		border-bottom: dotted 1px rgba(128,128,128,0.5);
 		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
@@ -97,12 +98,15 @@
 		-o-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+*/
+        
 		outline: 0;
+        color: #0070A1;
 	}
 
 		a:hover
 		{
-			color: #E27689;
+            color: #0047A1;
 			border-bottom-color: rgba(255,255,255,0);
 		}
 
