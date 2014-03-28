@@ -2,15 +2,6 @@ name: Son Pham
 markdown: redcarpet
 pygments: true
 permalink: pretty
-url: s0nny.github.io
+url: https://s0nny.github.io
 description: Son Pham's personal site.
 timezone: US/Central
-include: ['index.html', 'post.html']
-
-fullname: "Son Pham"
-title: "Software Engineer"
-github: "https://github.com/s0nny"
-facebook: "https://facebook.com/s0nnyftw"
-linkedin: "https://www.linkedin.com/pub/son-pham/60/a28/31a"
-email: "son.pham@utdallas.edu"
-sitegithub: s0nny.github.io
