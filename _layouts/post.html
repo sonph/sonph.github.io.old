@@ -8,18 +8,22 @@ postsclass: "active"
                 <!-- Posts -->
                     <section id="posts" class="one">
                         <div class="container">
-                            <p>
-                                <a href="/{{ page.category }}">{{page.category}}</a><br />
-                                {{page.date | date_to_string}}<br />
-                                {% for i in page.tags %}
-                                {{ i }}
-                                {% endfor %}
-                            </p>
+                            {% if page.imgfeatured %}
+                            <a href="{{page.imgfeaturedlink}}" class="image featured"><img src="/assets/img
+/{{page.imgfeatured}}" alt="" /></a>
+                            {% endif %}
 
-                            <br />
                             <header>
                                 <h2 class="alt">{{page.title}}</h2>
                             </header>
+
+                            <p>
+                                {{page.date | date_to_string}}<br />
+                                {% for tag in page.tags %}
+                                    <a href="/tag/{{tag}}">{{tag}}</a>
+                                {% endfor %}
+                                <br />
+                            </p>
                             
                             {{content}}
 
