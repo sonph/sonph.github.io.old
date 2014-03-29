@@ -1,18 +1,27 @@
 ---
+layout: default
+root: "/index.html"
+postsclass: "active"
 ---
-{% include header.html %}
-{% include nav.html root="/index.html" postsclass="active" %}
         <!-- Main -->
             <div id="main">
                 <!-- Posts -->
                     <section id="posts" class="one">
                         <div class="container">
+                            <p>
+                                <a href="/{{ page.category }}">{{page.category}}</a><br />
+                                {{page.date | date_to_string}}<br />
+                                {% for i in page.tags %}
+                                {{ i }}
+                                {% endfor %}
+                            </p>
+
                             <br />
                             <header>
-                                <h2 class="alt">{{ page.title }}</h2>
+                                <h2 class="alt">{{page.title}}</h2>
                             </header>
                             
-                            {{ content }}
+                            {{content}}
 
                         </div>
                     </section>
@@ -24,4 +33,3 @@
 
                     </section>
             </div>
-{% include footer.html %}
