@@ -38,6 +38,7 @@
 		font-weight: 200;
 		color: #333;
 		line-height: 1.5em;
+		margin-bottom: 0.5em;
 	}
 	
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -145,6 +146,7 @@
 	
 	p, ul, ol, dl, table
 	{
+		text-align: left;
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
@@ -1022,6 +1024,13 @@
 		
 			#nav ul li
 			{
+				text-align: right;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 18pt;
+				font-weight: 300;
+				line-height: 1.75em;
+				color: #555;
+				-webkit-text-stroke: 0.15px;
 			}
 			
 				#nav ul li a
