@@ -1,0 +1,27 @@
+---
+---
+{% include header.html %}
+{% include nav.html root="/index.html" postsclass="active" %}
+        <!-- Main -->
+            <div id="main">
+                <!-- Posts -->
+                    <section id="posts" class="one">
+                        <div class="container">
+                            <br />
+                            <header>
+                                <h2 class="alt">{{ page.title }}</h2>
+                            </header>
+                            
+                            {{ content }}
+
+                        </div>
+                    </section>
+                
+                
+                <!-- Comments -->
+                    <section id="disqus" class="two">
+                        {% include disqus.html %}
+
+                    </section>
+            </div>
+{% include footer.html %}
