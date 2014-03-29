@@ -1,6 +1,12 @@
 @charset 'UTF-8';
 
 @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xKzhfLGYMo1TX3XnL4EHuCg.woff) format('woff');
+}
 
 /*
 	Prologue 1.2 by HTML5 UP
@@ -20,17 +26,17 @@
 	body,input,textarea,select
 	{
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
+		font-size: 25pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #555;
 		-webkit-text-stroke: 0.15px;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 200;
-		color: #666;
+		color: #333;
 		line-height: 1.5em;
 	}
 	
@@ -99,14 +105,14 @@
 		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 */
-        
+		
 		outline: 0;
-        color: #0070A1;
+		color: #0070A1;
 	}
 
 		a:hover
 		{
-            color: #0047A1;
+			color: #0047A1;
 			border-bottom-color: rgba(255,255,255,0);
 		}
 
@@ -139,7 +145,12 @@
 	
 	p, ul, ol, dl, table
 	{
-		margin-bottom: 2em;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 15pt;
+		font-weight: 300;
+		line-height: 1.2em;
+		color: #555;
+		margin-bottom: 1em;
 	}
 
 	br.clear
