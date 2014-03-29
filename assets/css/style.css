@@ -36,7 +36,7 @@
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 200;
-		color: #333;
+		color: #555;
 		line-height: 1.5em;
 		margin-bottom: 0.5em;
 	}
@@ -60,12 +60,7 @@
 		
 			h2.alt
 			{
-				color: #888;
-			}
-			
-			h2.alt strong
-			{
-				color: #666;
+				color: #333;
 			}
 
 		h3
@@ -148,7 +143,7 @@
 	{
 		text-align: left;
 		font-family: 'Open Sans Condensed', sans-serif;
-		font-size: 17pt;
+		font-size: 14pt;
 		font-weight: 300;
 		line-height: 1.4em;
 		color: #555;
@@ -166,6 +161,12 @@
 		article
 		{
 			margin-bottom: 3em;
+		}
+
+		section > .container,
+		article > .container {
+			padding-left: 10%;
+			padding-right: 10%;
 		}
 		
 		section > :last-child,
