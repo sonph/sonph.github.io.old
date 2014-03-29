@@ -148,9 +148,9 @@
 	{
 		text-align: left;
 		font-family: 'Open Sans Condensed', sans-serif;
-		font-size: 15pt;
+		font-size: 17pt;
 		font-weight: 300;
-		line-height: 1.2em;
+		line-height: 1.4em;
 		color: #555;
 		margin-bottom: 1em;
 	}
@@ -1154,3 +1154,12 @@
 		{
 			background-color: #e8edec;
 		}
+
+/*********************************************************************************/
+/* Disqus                                                                          */
+/*********************************************************************************/
+
+#disqus_thread {
+	padding-left: 15%;
+	padding-right: 15%;
+}
