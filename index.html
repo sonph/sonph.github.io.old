@@ -6,9 +6,7 @@
         <meta name="description" content="Son Pham's personal site." />
         <meta name="keywords" content="" />
         <link rel="stylesheet" href="/assets/css/style.css" />
-        
         <link rel="stylesheet" href="/assets/packaged/css/semantic.min.css" />
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script src="/assets/packaged/javascript/semantic.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
@@ -18,10 +16,42 @@
         </div>
         <br class="clear">
         <nav id="topnav">
-            
         </nav>
         <div id="container" class="ui content grid">
-                <aside id="side" class="four wide tablet only column"> 
+                <div id="navmobile" class="mobile only row">
+                    <div>
+                        <div style="display: inline-block;">
+                            <a href="#"><img src="http://placehold.it/120x120"></a>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <strong>Son Pham</strong>
+                            <br>
+                            <em>Software Engineer</em>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <a><i class="square home icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square pencil icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square code icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square user icon"></i></a>
+                    </div>
+                    <br>
+                    <div>
+                        <a><i class="square github sign icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square linkedin sign icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square facebook sign icon"></i></a>
+                        &nbsp; &nbsp;
+                        <a><i class="square mail icon"></i></a>
+                    </div>
+                </div>
+                <aside id="side" class="four wide column"> 
                 <div id="sideprofile">
                     <a href="#"><img src="http://placehold.it/120x120"></a>
                     <br>
@@ -33,44 +63,17 @@
                 <hr>
                 <div id="sidenav">
                     <ul>
-                        <li><a href="#">Home</a> &nbsp;<span class="fa fa-home solo"></span></li>
-                        <li><a href="#">Posts</a> &nbsp;<span class="fa fa-pencil solo"></span></li>
-                        <li><a href="#">Projects</a> &nbsp;<span class="fa fa-code solo"></span></li>
-                        <li><a href="#">About</a> &nbsp;<span class="fa fa-user solo"></span></li>
+                        <li><a href="#">Home</a> &nbsp;<i class="home icon"></i></li>
+                        <li><a href="#">Posts</a> &nbsp;<i class="pencil icon"></i></li>
+                        <li><a href="#">Projects</a> &nbsp;<i class="code icon"></i></li>
+                        <li><a href="#">About</a> &nbsp;<i class="user icon"></i></li>
                     </ul>
                     <hr>
                     <ul>
-                        <li><a href="#" target="_blank">Github</a> &nbsp;<span class="fa fa-github-square solo"></span></li>
-                        <li><a href="#" target="_blank">Linkedin</a> &nbsp;<span class="fa fa-linkedin-square solo"></span></li>
-                        <li><a href="#" target="_blank">Facebook</a> &nbsp;<span class="fa fa-facebook-square solo"></span></li>
-                        <li><a href="#" target="_blank">Email</a> &nbsp;<span class="fa fa-envelope solo"></span></li>
-                    </ul>
-                    
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                </div>
-            </aside><aside id="side" class="four wide computer only column"> 
-                <div id="sideprofile">
-                    <a href="#"><img src="http://placehold.it/120x120"></a>
-                    <br>
-                    <strong>Son Pham</strong>
-                    <br>
-                    <em>Software Engineer</em>
-                    <br><br>
-                </div>
-                <hr>
-                <div id="sidenav">
-                    <ul>
-                        <li><a href="#">Home</a> &nbsp;<span class="fa fa-home solo"></span></li>
-                        <li><a href="#">Posts</a> &nbsp;<span class="fa fa-pencil solo"></span></li>
-                        <li><a href="#">Projects</a> &nbsp;<span class="fa fa-code solo"></span></li>
-                        <li><a href="#">About</a> &nbsp;<span class="fa fa-user solo"></span></li>
-                    </ul>
-                    <hr>
-                    <ul>
-                        <li><a href="#" target="_blank">Github</a> &nbsp;<span class="fa fa-github-square solo"></span></li>
-                        <li><a href="#" target="_blank">Linkedin</a> &nbsp;<span class="fa fa-linkedin-square solo"></span></li>
-                        <li><a href="#" target="_blank">Facebook</a> &nbsp;<span class="fa fa-facebook-square solo"></span></li>
-                        <li><a href="#" target="_blank">Email</a> &nbsp;<span class="fa fa-envelope solo"></span></li>
+                        <li><a href="#" target="_blank">Github</a> &nbsp;<i class="github sign icon"></i></li>
+                        <li><a href="#" target="_blank">Linkedin</a> &nbsp;<i class="linkedin sign icon"></i></li>
+                        <li><a href="#" target="_blank">Facebook</a> &nbsp;<i class="facebook sign icon"></i></li>
+                        <li><a href="#" target="_blank">Email</a> &nbsp;<i class="mail icon"></i></li>
                     </ul>
                     
                     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
@@ -80,8 +83,8 @@
                 
                 <article class="article">
                     <h1>Lorem ipsum dolor sit amet.</h1>
-                    <p class="tags"><span class="fa fa-tags"></span>&nbsp; <a>python</a>, <a>image</a></p>
-                    <p class="date"><span class="fa fa-calendar"></span>&nbsp; 5 April 2014</p>
+                    <p class="tags"><i class="tags icon"></i>&nbsp; <a>python</a>, <a>image</a></p>
+                    <p class="date"><i class="calendar icon"></i>&nbsp; 5 April 2014</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a>Proin porttitor felis</a> ac nunc porta tristique. Nulla purus velit, tempus id orci ut, lobortis lacinia ante. Aenean viverra urna justo, sit amet posuere odio consectetur sit amet. Nunc vel euismod eros, pharetra lacinia dui. Nunc consequat, metus sit amet pellentesque fringilla, ipsum lectus porttitor tellus, a congue nulla velit quis nulla. Nunc adipiscing scelerisque risus, at luctus nulla facilisis suscipit. Maecenas ultricies at lectus non fringilla. Morbi id scelerisque quam. Aenean ullamcorper semper velit, sit amet tempor diam convallis a. Suspendisse potenti. Nullam ac placerat tortor, et aliquet leo. Vestibulum massa leo, commodo vitae nisi vel, pulvinar molestie massa.</p>
 <p>
 Nunc non vulputate nibh. Donec sollicitudin vulputate ultricies. Ut lobortis adipiscing pellentesque. Vestibulum enim justo, pharetra non enim nec, aliquam molestie massa. Phasellus porta gravida velit a placerat. Nam vel orci libero. Mauris nec metus ante. Cras nibh massa, interdum eget ullamcorper pharetra, placerat a tellus. Praesent id dignissim neque. Nam iaculis, velit sit amet bibendum vulputate, nisl leo sollicitudin ipsum, et dignissim risus ante ac arcu. Maecenas posuere non risus ac sodales. Fusce porta viverra ullamcorper. Vestibulum vitae mi sit amet nibh rutrum dapibus. Donec vel quam vel nibh molestie scelerisque non in ipsum. Cras iaculis lectus vitae faucibus lacinia.</p>
@@ -94,20 +97,6 @@ Morbi eget ullamcorper ligula. Nam dui sapien, fermentum in suscipit nec, auctor
                     disqus
                 </div>
             </div>
-<!--
-            <div class="mobile only row">
-                NAV MOBILE
-            </div>
-            <div class="table only row">
-                    NAV TABLET
-            </div>
-            <div class="computer only row">
-                    NAV COMPUTER
-            </div>
-            <div class="ui twelve wide column">
-                TEXT2
-            </div>
--->
         </div>
         <div id="footer">
         </div>

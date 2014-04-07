@@ -20,49 +20,39 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.5em;
 }
 
-#side {
-    line-height: 1.5em;
-    text-align: right;
-    padding-left: 40px;
-    margin-top: 35px;
+#side, #navmobile {
     color: #4f4f4f;
 }
 
-#side hr {
-    max-width: 120px;
-    margin-right: 0px;
-}
-
-#main {
-    padding-left: 20px;
-    padding-right: 10%;
-    max-width: 850px;
-}
+    #side hr {
+        max-width: 120px;
+        margin-right: 0px;
+    }
 
 .article * {
     font-family: serif;
-    line-height: 1.5em
+    line-height: 1.7em;
+    font-size: 1.1em;
 }
 
-.article > h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 40px;
-    line-height: 1.3em;
-    margin-bottom: 0;
-    margin-top: 35px;    
-    color: #4f4f4f;
-}
+    .article > h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 3.5em;
+        line-height: 1.3em;
+        margin-bottom: 0;
+        margin-top: 35px;    
+        color: #4f4f4f;
+    }
 
-.tags, .tags * {
-    font-family: 'Source Sans Pro', sans-serif;
-}
+    .tags, .tags * {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 
-.date {
-    font-family: 'Source Sans Pro', sans-serif;
-}
+    .date {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 
 a {
     text-decoration: none;
@@ -71,4 +61,38 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+    #main {
+        margin-left: 5%;
+        min-width: 90%;
+    }
+    
+    #navmobile {
+        margin-top: 35px;
+        margin-left: 5%;
+        font-style: normal;
+        font-size: 17px;
+    }
+    
+    #side {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #main {
+        padding-left: 20px;
+        padding-right: 10%;
+        max-width: 700px;
+    }
+    
+    #side {
+        line-height: 1.5em;
+        text-align: right;
+        padding-left: 40px;
+        margin-top: 35px;
+        display: inline-block;
+    }
 }
