@@ -20,6 +20,8 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
 #side, #navmobile {
@@ -99,14 +101,18 @@ a:hover {
     #main {
         padding-left: 20px;
         padding-right: 10%;
-        max-width: 700px;
+        max-width: 800px;
+    }
+    
+    #navmobile {
+        display: none;
     }
     
     #side {
         line-height: 1.5em;
         text-align: right;
         padding-left: 40px;
-        margin-top: 35px;
+        margin-top: 68px;
         display: inline-block;
     }
 }
