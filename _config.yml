@@ -1,6 +1,8 @@
 name: Son Pham
 markdown: redcarpet
 pygments: true
+extensions: [fenced_code_blocks]
+
 permalink: pretty
 url: https://sonph.net/
 description: Son Pham's personal site.
