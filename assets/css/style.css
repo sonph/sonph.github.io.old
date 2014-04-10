@@ -13,10 +13,6 @@ br.clear {
     clear: both;
 }
 
-#header {
-    background-color: #008959;
-}
-
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
@@ -25,14 +21,14 @@ body {
     padding: 0;
 }
 
-#side, #navmobile {
-    color: #202020;
+a {
+    text-decoration: none;
+    color: #008959;
 }
 
-    #side hr {
-        max-width: 120px;
-        margin-right: 0px;
-    }
+a:hover {
+    text-decoration: underline;
+}
 
 code {
     font-family: monospace;
@@ -75,7 +71,7 @@ pre {
         margin-bottom: 0;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 2.5em;
-        color: #707070;
+        color: #757575;
     }
 
     .article h3 {
@@ -103,14 +99,19 @@ pre {
         color: #202020;
     }
 
-a {
-    text-decoration: none;
-    color: #008959;
+#header {
+    background-color: #008959;
 }
 
-a:hover {
-    text-decoration: underline;
+#side, #navmobile {
+    color: #202020;
 }
+
+    #side hr {
+        max-width: 120px;
+        margin-right: 0px;
+    }
+
 
 @media only screen and (max-width: 767px) {
     #main {
