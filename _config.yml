@@ -4,6 +4,7 @@ pygments: true
 permalink: pretty
 url: https://s0nny.github.io
 description: Son Pham's personal site.
+keywords:
 timezone: US/Central
 url:
     home: /
