@@ -66,6 +66,26 @@ figure img {
     border: none;
 }
 
+figure figcaption {
+    color: #707070;
+}
+
+blockquote {
+    font-style: italic;
+    padding-left: 3em;
+    color: #707070;
+}
+
+blockquote p:before {
+    content: '\201c';
+    font-size: 2em;
+}
+
+blockquote p:after {
+    content: '\201d';
+    font-size: 2em;
+}
+
 .article p, .article {
     font-family: serif;
     line-height: 1.7em;
