@@ -1,7 +1,6 @@
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 /* html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;} article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;} */
 
-
 /*
 * {
   border: 1px solid gray;
@@ -21,6 +20,7 @@ body {
     padding: 0;
 }
 
+/* LINKS */
 a {
     text-decoration: none;
     color: #008959;
@@ -30,28 +30,7 @@ a:hover {
     text-decoration: underline;
 }
 
-code {
-    font-family: monospace;
-    background-color: #fafafa;
-/*    border: 1px solid #d0d0d0;*/
-    padding: .22em;
-    white-space: nowrap;
-}
-
-pre {
-    font-family: Inconsolata;
-    background-color: #fafafa;
-    border: 1px solid #d0d0d0;
-    padding: 0.5em 1em;
-    line-height: 1.25em;
-    white-space: pre;
-    overflow-x: auto;
-}
-    pre code {
-        border: none;
-        white-space: pre;
-    }
-
+/* IMAGE / FIGURE */
 img {
     border: 1px solid #d0d0d0;
     padding: 5px;
@@ -70,6 +49,7 @@ figure figcaption {
     color: #707070;
 }
 
+/* BLOCKQUOTE */
 blockquote {
     font-style: italic;
     padding-left: 3em;
@@ -86,6 +66,7 @@ blockquote p:after {
     font-size: 2em;
 }
 
+/* TABLES */
 table {
     border: 1px solid #d0d0d0;
 /*
@@ -112,53 +93,99 @@ table tr:nth-child(even) {
     background-color: #fafafa;
 }
 
+/* CODE BLOCKS */
+code {
+    font-family: monospace;
+    font-size: 0.8em;
+    background-color: #fafafa;
+/*    border: 1px solid #d0d0d0;*/
+    padding: .22em;
+    white-space: nowrap;
+}
+
+pre {
+    font-family: monospace;
+    background-color: #fafafa;
+    border: 1px solid #d0d0d0;
+    padding: 0.5em 1em;
+    line-height: 1.25em;
+    white-space: pre;
+    overflow-x: auto;
+}
+pre code {
+    border: none;
+    white-space: pre;
+}
+
+
+/* CODE BLOCKS WITH LINE NUMBERS */
+.highlighttable pre, .highlighttable code {
+    border: none;
+    line-height: 1.25em;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.highlighttable pre code {
+    font-size: 1em;
+}
+
+.highlighttable td {
+    padding: 0;
+}
+
+
+/* ARTICLE */
 .article p, .article {
     font-family: serif;
     line-height: 1.7em;
     font-size: 1em;
 }
 
-    .article h1 {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 3.5em;
-        line-height: 1.3em;
-        margin-bottom: 0;
-        margin-top: 35px;    
-        color: #404040;
-    }
+.article h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.5em;
+    line-height: 1.3em;
+    margin-bottom: 0;
+    margin-top: 35px;    
+    color: #404040;
+}
 
-    .article h2, h3, h4, h5, h6 {
-        margin-bottom: 0;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 2.5em;
-        color: #757575;
-    }
+.article h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5em;
+    color: #757575;
+    padding-top: 0.5em;
+}
 
-    .article h3 {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 2em;
-    }
+.article h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+}
 
-    .article h4, h5, h6 {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 1.5em;
-    }
+.article h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+}
 
-    .article .excerpt {
-        color: #505050;
-    }
+.article .excerpt {
+    color: #505050;
+}
 
-    .tags, .tags * {
-        font-family: 'Source Sans Pro', sans-serif;
-        margin: 0;
-    }
+.tags, .tags * {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
 
-    .date {
-        font-family: 'Source Sans Pro', sans-serif;
-        margin: 0;
-        color: #202020;
-    }
+.date {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    color: #202020;
+}
 
+
+/* SPECIFIC IDs */
 #header {
     background-color: #008959;
 }
@@ -173,6 +200,7 @@ table tr:nth-child(even) {
     }
 
 
+/* RESPONSIVE VIEWS */
 @media only screen and (max-width: 767px) {
     #main {
         margin-left: 5%;
