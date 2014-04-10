@@ -1,50 +1,43 @@
-<!-- Header -->
-            <div id="header" class="skel-panels-fixed">
-
-                <div class="top">
-
-                    <!-- Logo -->
-                        <div id="logo">
-                            <!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
-                            <h1 id="title">Son Pham</h1>
-                            <span class="byline">Software Engineer</span>
-                        </div>
-
-                    <!-- Nav -->
-                        <nav id="nav">
+            <aside id="side" class="four wide column"> 
+                <div id="sideprofile">
+                    <a href="{{site.url.about}}"><img src="/assets/img/profile.gif"></a>
+                    <br>
+                    <strong>Son Pham</strong>
+                    <br>
+                    <em>Software Engineer</em>
+                    <br><br>
+                </div>
+                <hr>
+                <div id="sidenav">
+                    <ul>
+                        <li><a href="{{site.url.home}}">Home</a> &nbsp;<i class="home icon"></i></li>
+                        <li><a href="{{site.url.posts}}">Posts</a> &nbsp;<i class="pencil icon"></i></li>
+                        <li><a href="{{site.url.projects}}">Projects</a> &nbsp;<i class="code icon"></i></li>
+                        <li><a href="{{site.url.about}}">About</a> &nbsp;<i class="user icon"></i></li>
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li><a href="{{site.url.github}}" target="_blank">GitHub</a> &nbsp;<i class="github sign icon"></i></li>
+                        <li><a href="{{site.url.linkedin}}" target="_blank">LinkedIn</a> &nbsp;<i class="linkedin sign icon"></i></li>
+                        <li><a href="{{site.url.facebook}}" target="_blank">Facebook</a> &nbsp;<i class="facebook sign icon"></i></li>
+                        <li><script type="text/javascript">
+                            //<![CDATA[
                             <!--
-                            
-                                Prologue's nav expects links in one of two formats:
-                                
-                                1. Hash link (scrolls to a different section within the page)
-                                
-                                   <li><a href="#foobar" id="foobar-link" class="skel-panels-ignoreHref"><span class="fa fa-whatever-icon-you-want">Foobar</span></a></li>
-
-                                2. Standard link (sends the user to another page/site)
-
-                                   <li><a href="http://foobar.tld"><span class="fa fa-whatever-icon-you-want">Foobar</span></a></li>
-                            
-                            -->
-                            <ul>
-                                <li><a href="{{ page.root }}#top" id="top-link" class="skel-panels-ignoreHref {{ page.topclass }}"><span class="fa fa-home">Home</span></a></li>
-                                <li><a href="{{ page.root }}#posts" id="posts-link" class="skel-panels-ignoreHref {{ page.postsclass }}"><span class="fa fa-pencil">Posts</span></a></li>
-                                <li><a href="{{ page.root }}#portfolio" id="portfolio-link" class="skel-panels-ignoreHref {{ page.portfolioclass }}"><span class="fa fa-code">Projects</span></a></li>
-                                <li><a href="{{ page.root }}#about" id="about-link" class="skel-panels-ignoreHref {{ page.aboutclass }}"><span class="fa fa-user">About</span></a></li>
-                            </ul>
-                        </nav>
-                        
+                            var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+                            "=92){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+                            ".substr(0,ol);}f(\")811,\\\"_\\\\\\\\PCKV610\\\\IYZA>710\\\\710\\\\<7}02;4z" +
+                            "310\\\\k&'2>2p&rv<8('ngx$k771\\\\.(!R{300\\\\630\\\\gQWY[Tj620\\\\o710\\\\E" +
+                            "UH\\\\\\\\LX310\\\\010\\\\u\\\\\\\\BH310\\\\LSLNS_rt}v771\\\\#wcz|u~0M-ik77" +
+                            "1\\\\d+k5*/hiawkswPt\\\\220\\\\630\\\\720\\\\410\\\\330\\\\030\\\\220\\\\\\" +
+                            "\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;i=+y)8" +
+                            "11==i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"    ;
+                            while(x=eval(x));
+                            //-->
+                            //]]>
+                        </script>
+                        </li>
+                    </ul>
+                    
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
                 </div>
-                
-                <div class="bottom">
-
-                    <!-- Social Icons -->
-                        <ul class="icons">
-                            <li><a href="https://github.com/s0nny" target="_blank" class="fa fa-github-square solo" title="GitHub"><span>GitHub</span></a></li>
-                            <li><a href="https://facebook.com/s0nnyftw" target="_blank" class="fa fa-facebook-square solo" title="Facebook"><span>Facebook</span></a></li>
-                            <li><a href="https://www.linkedin.com/pub/son-pham/60/a28/31a" target="_blank" class="fa fa-linkedin-square solo" title="LinkedIn"><span>LinkedIn</span></a></li>
-                            <li><a href="mailto:son.pham@utdallas.edu" target="_blank" class="fa fa-envelope solo" title="Email"><span>Email</span></a></li>
-                        </ul>
-                
-                </div>
-            
-            </div>
+            </aside>
