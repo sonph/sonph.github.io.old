@@ -2,11 +2,11 @@ name: Son Pham
 markdown: redcarpet
 pygments: true
 permalink: pretty
-url: https://s0nny.github.io
+url: https://sonph.net/
 description: Son Pham's personal site.
 keywords:
 timezone: US/Central
-url:
+link:
     home: /
     posts: /posts
     projects: /code
