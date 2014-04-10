@@ -1,7 +1,8 @@
 name: Son Pham
 markdown: redcarpet
 pygments: true
-extensions: [fenced_code_blocks]
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "autolink", "no_intra_emphasis"]
 
 permalink: pretty
 url: https://sonph.net/

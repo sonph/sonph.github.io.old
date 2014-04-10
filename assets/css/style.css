@@ -86,6 +86,32 @@ blockquote p:after {
     font-size: 2em;
 }
 
+table {
+    border: 1px solid #d0d0d0;
+/*
+    border-collapse: separate;
+    border-spacing: 15px 2px;
+*/
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td, th {
+    padding: 2px 15px;
+}
+
+table th {
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #fafafa;
+}
+
+table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
 .article p, .article {
     font-family: serif;
     line-height: 1.7em;
