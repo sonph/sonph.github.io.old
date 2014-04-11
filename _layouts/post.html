@@ -10,6 +10,10 @@ layout: default
 
                     <!-- date -->
                     <p class="date"><i class="calendar icon"></i>&nbsp; {{ page.date | date_to_string }}</p>
+
+                    <!-- description -->
+                    <p class="excerpt">{{ page.description }}</p>
+                    <hr>
                     
                     <!-- content -->
                     {{ content }}
