@@ -142,7 +142,7 @@ pre code {
     font-size: 1em;
 }
 
-.article h1 {
+.article h1, .articlelist > h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3.5em;
     line-height: 1.3em;
@@ -169,7 +169,7 @@ pre code {
     font-size: 1.5em;
 }
 
-.article .excerpt {
+.article .excerpt, .excerpt {
     color: #505050;
 }
 
@@ -182,6 +182,11 @@ pre code {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     color: #202020;
+}
+
+.articlelist > .article h1 {
+    font-size: 2.5em;
+    color: #20A979; /* lighter color for bigger font */
 }
 
 
