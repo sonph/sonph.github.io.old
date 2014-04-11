@@ -12,7 +12,7 @@ timezone: US/Central
 link:
     home: /
     posts: /posts
-    projects: /code
+    code: /code
     about: /about
     github: https://github.com/sonph
     linkedin: https://linkedin.com/in/sonph
