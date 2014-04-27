@@ -27,6 +27,9 @@ title:
         {{ post.content }}
 
     </article>
+    <hr>
+    {% include addthis.html url=post.url %}
+    <br>
     {% include disqus.html %}
 {% endif %}
 {% endfor %}
