@@ -111,6 +111,8 @@ pre {
     line-height: 1.25em;
     white-space: pre;
     overflow-x: auto;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 pre code {
     border: none;
