@@ -101,6 +101,7 @@ code {
 /*    border: 1px solid #d0d0d0;*/
     padding: .22em;
     white-space: nowrap;
+    font-size: 9pt;
 }
 
 pre {
@@ -141,7 +142,7 @@ pre code {
 .article p, .article {
     font-family: Droid Serif, serif;
     line-height: 1.7em;
-    font-size: 1em;
+    font-size: 10.5pt;
 }
 
 .article h1, .articlelist > h1 {
