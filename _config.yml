@@ -1,6 +1,6 @@
 name: Son Pham
 markdown: redcarpet
-pygments: true
+highlighter: true
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "autolink", "no_intra_emphasis"]
 
