@@ -116,252 +116,34 @@
 
     <article class="article">
         <!-- title -->
-        <h1>Exact inference in Bayesian networks</h1>
+        <h1>MoinMoin - Recover from being locked out of a page</h1>
 
         <!-- tags -->
         
-        <p class="tags">
-            <i class="tags icon"></i>&nbsp; 
-             
-                <a target="_blank" href="//python">
-                    python
-                </a>
-             
-                <a target="_blank" href="//ai">
-                    ai
-                </a>
-             
-                <a target="_blank" href="//probability">
-                    probability
-                </a>
-             
-                <a target="_blank" href="//code">
-                    code
-                </a>
-            
-        </p>
-        
 
         <!-- date -->
-        <p class="date"><i class="calendar icon"></i>&nbsp; 26 Apr 2014</p>
+        <p class="date"><i class="calendar icon"></i>&nbsp; 23 Jul 2014</p>
         
         <!-- content -->
-        <p><br>
-<figure>
-    <img src="/assets/img/seashell.png" alt="xkcd 1236 - Seashell" title="xkcd 1236 - Seashell">
-    <figcaption>Xkcd 1236 - Seashell</figcaption>
-</figure></p>
-
-<p><br></p>
-
-<p>This is one of the programming assignments I did in the Introduction to Artificial Intelligence course (CS4365). It implements two algorithms for performing <em>exact inference</em> given a <em><a href="http://en.wikipedia.org/wiki/Bayesian_network">Bayesian network</a></em>, namely <em>variable enumeration</em> and <em>variable elimination</em>. These exact inference algorithms produce, well, exact probability distribution over the <em>query variable</em> given the <em>observed evidences</em>, as compared to the method of <em>sampling</em> which gives an approximate result.</p>
-
-<p>Source code is available <a href="https://github.com/sonph/bayesnetinference" target="_blank">here</a>.</p>
-
-<h2>The program</h2>
-
-<p>The program was written in Python 3 and only uses modules in the standard library. The program accepts exactly three command line arguments:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">BayesNet.py &lt;file&gt; &lt;enum|elim&gt; &lt;query&gt;
+        <p>If you ever get locked out of a MoinMoin wiki page because you accidentally set the ACL (Access Control List) for it to be something along the line of</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#acl All: [...]
 </code></pre></div>
-<p>where:</p>
+<p>You will need to actually log in to the server hosting the engine and edit the page directly on the file system. This is because MoinMoin blocks all requests to the page, including those from wiki superusers.</p>
 
-<ul>
-<li><p><code>file</code> is the name of the file containing the Bayesian network in the form of conditional probability tables (see below for the BNF notation of the file).</p></li>
-<li><p><code>enum|elim</code> specifies the algorithm to be used, either <code>enum</code> for enumeration or <code>elim</code> for elimination.</p></li>
-<li><p><code>query</code> is the query to be executed, for example <code>&quot;P(B)&quot;</code> or <code>&quot;P(A|E=t,M=f)&quot;</code> (double quotes are needed to pass the raw string to the program). At the moment the query on takes a single query variable and zero or more evidence variables.</p></li>
-</ul>
+<p>Here&#39;s how to do it:</p>
 
-<h2>File format</h2>
-
-<p>The format for the file that specifies a Bayesian network is as follow in BNF notation:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;file&gt; ::= &lt;var-prob&gt; (&lt;newline&gt; &lt;newline&gt; &lt;var-prob&gt;)*
-&lt;var-prob&gt; ::= &lt;prior-prob&gt; | &lt;prob-table&gt;
-&lt;prior-prob&gt; ::= &quot;P(&quot; &lt;var&gt; &quot;) = &quot; &lt;decimal&gt;
-&lt;prob-table&gt; ::= &lt;header&gt; &lt;newline&gt; &lt;horiz-sep&gt; &lt;newline&gt;
-&lt;entry-list&gt;
-&lt;header&gt; ::= &lt;var&gt; (&quot; &quot; &lt;var&gt;)* &quot; | &quot; &lt;var&gt;
-&lt;horiz-sep&gt; ::= &quot;-&quot;+ &quot;|&quot; &quot;-&quot;+
-&lt;entry-list&gt; ::= &lt;table-entry&gt; (&lt;newline&gt; &lt;table-entry&gt;)+
-&lt;table-entry&gt; ::= &lt;truth-symb&gt; (&quot; &quot; &lt;truth-symb&gt;)* &quot; | &quot;
-&lt;decimal&gt;
-&lt;truth-symb&gt; ::= &quot;t&quot; | &quot;f&quot;
-&lt;decimal&gt; ::= &quot;0&quot; | &quot;0&quot;? &quot;.&quot; &lt;digit&gt;+
-&lt;digit&gt; ::= &quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&quot;|&quot;4&quot;|&quot;5&quot;|&quot;6&quot;|&quot;7&quot;|&quot;8&quot;|&quot;9&quot;
-&lt;var&gt; ::= &quot;A&quot;|&quot;B&quot;|&quot;C&quot;|&quot;D&quot;|&quot;E&quot;|&quot;F&quot;|&quot;G&quot;|&quot;H&quot;|&quot;I&quot;|&quot;J&quot;|&quot;K&quot;|&quot;L&quot;|&quot;M&quot;|&quot;N&quot;|
-&quot;O&quot;|&quot;P&quot;|&quot;Q&quot;|&quot;R&quot;|&quot;S&quot;|&quot;T&quot;|&quot;U&quot;|&quot;V&quot;|&quot;W&quot;|&quot;X&quot;|&quot;Y&quot;|&quot;Z&quot;
-&lt;newline&gt; ::= &quot;\n&quot;
-</code></pre></div>
-<p>Here&#39;s an example (<code>alarm.bn</code> in the repository):</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">P(B) = .001
-
-P(E) = .002
-
-B E | A
-----|-----
-t t | .95
-t f | .94
-f t | .29
-f f | .001
-
-A | J
---|-----
-t | 0.90
-f | 0.05
-
-A | M
---|-----
-t | 0.7
-f | 0.01
-</code></pre></div>
-<p>This file indicates that this particular Bayesian network consists of 5 variables, <code>B</code>, <code>E</code>, <code>A</code>, <code>J</code>, and <code>M</code>. The first line says that <code>B</code> is <code>true</code> with probability <code>.001</code>. We can infer that <code>B</code> is <code>false</code> with probability <code>1 - .001 = .99</code>. Same thing for <code>E</code>. The next table following <code>E</code> says that <code>A</code> is a child of <code>B</code> and <code>E</code> in the network. So looking at the table we can say that, if <code>B</code> is <code>true</code> and <code>E</code> is <code>false</code>, then <code>A</code> is <code>false</code> with probability <code>1 - .94 = .06</code>.</p>
-
-<figure>
-    <img src="/assets/img/burglary.png" alt="" title="">
-    <figcaption>Visual representation of the network</figcaption>
-</figure>
-
-<h2>The algorithms</h2>
-
-<p>Here are the pseudocodes that I used for the two algorithms:</p>
-
-<ul>
-<li><p>Variable enumeration</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">function ENUMERATION-ASK(X, e, bn) returns a distribution over X
-    inputs: X, the query variable
-            e, observed values for variables E
-            bn, a Bayesian network with variables {X} ∪ E ∪ Y
-
-    Q(X) &lt;- a distribution over X, initially empty
-    for each value of x_i for X             // values = false, true
-        extend e with value x_i for X       // add X = x_i to e
-        Q(x_i) &lt;- ENUMERATE-ALL(VARS[bn], e)
-    return NORMALIZE(Q(X))
-
-function ENUMERATE-ALL(vars, e) returns a real number
-    if EMPTY?(vars) then return 1.0
-    Y &lt;- FIRST(vars)
-    if Y has value y in e
-        then return P(Y=y|e) * ENUMERATE-ALL(REST(vars), e)
-        else
-            sum &lt;- 0
-            for each value y of Y          // values = false, true
-                extend e with value y for Y
-                sum &lt;- sum + (P(Y=y|e) * ENUMERATE-ALL(REST(vars), e))
-            return sum
+<ol>
+<li>Log in to the server hosting the wiki engine.</li>
+<li><p>Go to <code>[MoinMoin directory]/data/pages/[Your page]</code>, where <code>[MoinMoin directory]</code> is the directory that MoinMoin was installed into. If you don&#39;t know where it is, try <code>find</code>-ing or <code>locate</code>-ing the configuration file, <code>wikiconfig.py</code>. Also note that you may need special permission to do this step, depending on your server configuration.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd [MoinMoin directory]/data/pages/[Your page]
 </code></pre></div></li>
-<li><p>Variable elimination</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">function ELIMINATION-ASK(X, e, bn) returns a distribution over X
-    inputs: X, the query variable
-            e, observed values for variables E
-            bn, a Bayesian network with variables {X} ∪ E ∪ Y
-    factors &lt;- empty list
-    eliminated &lt;- empty set
-    loop
-        vars = [variables in VARS(bn) whose children are all in eliminated]
-        var = SORT-BY-FACTOR-SIZE(vars, bn)
-        // var is the variable that would create a smallest factor
-
-        factors &lt;- factors + MAKE-FACTOR(var, e)
-        if var is in Y then
-            relevant-factors &lt;- [all factors that contain var]
-            factors.remove(relevant-factors)
-            factors &lt;- factors + SUM-OUT(var, POINTWISE-PRODUCT(var, relevant-factors))
-        add var to eliminated
-    return NORMALIZE(POINTWISE-PRODUCT(factors))
+<li><p>Edit the current revision of the page by finding out what the current revision is and edit it (you may replace vim with your editor of choice).</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo vim ./revisions/$(cat current)
 </code></pre></div></li>
-</ul>
-
-<h2>Sample output</h2>
-
-<p>Here&#39;s a sample output of the program. Suppose that for the above sample network, we observed that an earthquake has happened. Now we want to find the probability that the alarm will sound. So the query is <code>P(A|E=t)</code>, meaning <em>find the probability that the alarm <code>A</code> will sound in the case of an earthquake</em>.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">% ./BayesNet.py alarm.bn enum &quot;P(A|E=t)&quot;
-M              | B=t J=t A=f E=t      = 1.00000000
-M              | B=t J=f A=f E=t      = 1.00000000
-J M            | B=t A=f E=t          = 1.00000000
-A J M          | B=t A=f E=t          = 0.05000000
-E A J M        | B=t A=f E=t          = 0.00010000
-M              | B=f J=t A=f E=t      = 1.00000000
-M              | B=f J=f A=f E=t      = 1.00000000
-J M            | B=f A=f E=t          = 1.00000000
-A J M          | B=f A=f E=t          = 0.71000000
-E A J M        | B=f A=f E=t          = 0.00142000
-B E A J M      | A=f E=t              = 0.00141868
-M              | B=t J=t A=t E=t      = 1.00000000
-M              | B=t J=f A=t E=t      = 1.00000000
-J M            | B=t A=t E=t          = 1.00000000
-A J M          | B=t A=t E=t          = 0.95000000
-E A J M        | B=t A=t E=t          = 0.00190000
-M              | B=f J=t A=t E=t      = 1.00000000
-M              | B=f J=f A=t E=t      = 1.00000000
-J M            | B=f A=t E=t          = 1.00000000
-A J M          | B=f A=t E=t          = 0.29000000
-E A J M        | B=f A=t E=t          = 0.00058000
-B E A J M      | A=t E=t              = 0.00058132
-
-RESULT:
-P(A = f | E = t) = 0.7093
-P(A = t | E = t) = 0.2907
-</code></pre></div>
-<p>And the program responds that in the case of an earthquake, the alarm sounds with a probability of about <code>0.71</code>, or <code>71%</code>. The lines above the result show the return values from calls to <code>ENUMERATE-ALL</code>.</p>
-
-<p>Here&#39;s the output for the same query using variable elimination:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">% ./BayesNet.py alarm.bn elim &quot;P(A|E=t)&quot;
------ Variable: J -----
-Factors:
-A=f: 1.0000
-A=t: 1.0000
-
------ Variable: M -----
-Factors:
-A=f: 1.0000
-A=t: 1.0000
-
-A=f: 1.0000
-A=t: 1.0000
-
------ Variable: A -----
-Factors:
-A=f: 1.0000
-A=t: 1.0000
-
-A=f: 1.0000
-A=t: 1.0000
-
-A=f B=f: 0.7100
-A=f B=t: 0.0500
-A=t B=f: 0.2900
-A=t B=t: 0.9500
-
------ Variable: E -----
-Factors:
-A=f: 1.0000
-A=t: 1.0000
-
-A=f: 1.0000
-A=t: 1.0000
-
-A=f B=f: 0.7100
-A=f B=t: 0.0500
-A=t B=f: 0.2900
-A=t B=t: 0.9500
-
------ Variable: B -----
-Factors:
-A=f: 1.0000
-A=t: 1.0000
-
-A=f: 1.0000
-A=t: 1.0000
-
-A=f: 0.7093
-A=t: 0.2907
-
-
-RESULT:
-P(A = f | E = t) = 0.7093
-P(A = t | E = t) = 0.2907
-</code></pre></div>
-<p>This algorithm produces the same result. The output also shows the order in which variables are eliminated, and all factors that are still active after the elimination of each variable.</p>
+<li><p>Delete the first line containing the <code>#acl</code> (<code>dd</code> in <code>vim</code>), and save the file (<code>:x</code> in <code>vim</code>).</p></li>
+<li><p>Reload your browser (and web browser if needed).</p></li>
+<li><p>Profits! Problem fixed!</p></li>
+</ol>
 
 <p>SP</p>
 
@@ -369,7 +151,7 @@ P(A = t | E = t) = 0.2907
     </article>
     <hr>
     <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://sonph.net/code/2014/04/26/exact-inference-in-bayesian-networks/">
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://sonph.net/posts/2014/07/23/moinmoin-recover-from-being-locked-out/">
 <a class="addthis_button_preferred_1"></a>
 <a class="addthis_button_preferred_2"></a>
 <a class="addthis_button_preferred_3"></a>
@@ -386,7 +168,7 @@ P(A = t | E = t) = 0.2907
                     <script type="text/javascript">
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'sonph'; // required: replace example with your forum shortname
-                    var disqus_identifier = 'http://sonph.net/code/2014/04/26/exact-inference-in-bayesian-networks/';
+                    var disqus_identifier = 'http://sonph.net/posts/2014/07/23/moinmoin-recover-from-being-locked-out/';
 
                     /* * * DON'T EDIT BELOW THIS LINE * * */
                     (function() {
@@ -399,6 +181,10 @@ P(A = t | E = t) = 0.2907
                     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     
                 </div>
+
+            
+
+            
 
             
 
