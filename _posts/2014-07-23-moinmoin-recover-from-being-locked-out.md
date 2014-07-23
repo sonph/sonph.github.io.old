@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MoinMoin - Recover from being locked out of a page #acl
+title: MoinMoin - Recover from being locked out of a page &#35;acl
 category: posts
 ---
 If you ever get locked out of a MoinMoin wiki page because you accidentally set the ACL (Access Control List) for it to be something along the line of
