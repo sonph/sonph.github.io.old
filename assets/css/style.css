@@ -152,6 +152,7 @@ pre code {
     margin-bottom: 0;
     margin-top: 35px;    
     color: #404040;
+    text-shadow: 0px 0px 1px;
 }
 
 .article h2, h3, h4, h5, h6 {
